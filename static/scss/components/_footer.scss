@@ -1,0 +1,110 @@
+.footer{
+  background-color: #535773;
+  background-image: linear-gradient(to bottom, rgba(242,242,242,0), rgba(252,252,252,0));
+  padding: 5rem 0;
+  .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.footer-item{
+  .logo{
+    span{
+      color: #ffffff;
+      font-size: 1.6rem;
+      line-height: 1.45;
+      font-weight: 400;
+      opacity: 0.9;
+      text-align: center;
+      display: block;
+    }
+  }
+  .copy{
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1.45;
+    font-weight: 400;
+    opacity: 0.9;
+    margin: 1.5rem 0;
+  }
+  .social-list{
+    ul{
+      display: flex;
+    }
+    li{
+      margin-right: 1.5rem;
+    }
+    a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      height: 6rem;
+      color: #ffffff;
+      font-size: 3.2rem;
+      line-height: 1.55;
+      font-weight: 600;
+      border-radius: 50%;
+      background-color: #4d516e;
+      img{
+        max-width: 2.5rem;
+      }
+    }
+  }
+  .social-list__title{
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1.45;
+    margin-top: 1rem;
+  }
+  .footer-list{
+    li{
+      margin-bottom: 1rem;
+    }
+    a{
+      color: rgba($white, .8);
+      font-size: 1.6rem;
+      line-height: 1.35;
+      font-weight: 400;
+      &:hover{
+        color: rgba($white, .6);
+      }
+    }
+  }
+  .two-column{
+    column-count: 2;
+  }
+}
+.footer-title{
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.footer-contact{
+  li{
+    color: rgba($white, .8);
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  a{
+    color: rgba($white,1);
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 400;
+  }
+  .link{
+    color: #f85c50;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 700;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

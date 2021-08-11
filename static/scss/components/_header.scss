@@ -1,0 +1,235 @@
+.header{
+  padding: 2rem 0;
+  z-index: 100;
+  background: #fff;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  &-logo{
+    img{
+      max-width: 19rem;
+    }
+    span{
+      color: #000000;
+      font-size: 1.6rem;
+      line-height: 1.45;
+      font-weight: 400;
+      opacity: 0.9;
+      display: block;
+      text-align: center;
+    }
+  }
+  &-nav{
+    ul{
+      display: flex;
+    }
+    li{
+      padding: 2rem 0;
+      margin-right: 3rem;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      &.has-sub{
+        position: relative;
+        &:hover{
+          ul{
+            opacity: 1;
+            z-index: 1;
+            visibility: visible;
+            top: 100%;
+          }
+        }
+      }
+      ul{
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+        background: #fff;
+        min-width: 20rem;
+        left: -6rem;
+        top: 120%;
+        transition: all ease 300ms;
+        &:before{
+          position: absolute;
+          content: '';
+          width: 2rem;
+          height: 2rem;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          top: -.7rem;
+          transform: rotate(-135deg);
+          background: #fff;
+          box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+        li{
+          margin-right: 0;
+          margin-bottom: 1rem;
+          padding: 0;
+        }
+        a{
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+    }
+    a{
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: rgba($black, .8);
+      &:hover{
+        color: rgba($black, .6);
+      }
+    }
+  }
+  &-contact{
+    text-align: right;
+    ul{
+      margin-bottom: 1rem;
+    }
+    li{
+      font-size: 1.6rem;
+    }
+    .location{
+      font-size: 1.8rem;
+    }
+  }
+  &-phones{
+    text-align: right;
+    li{
+      margin-bottom: 1.5rem;
+    }
+    a{
+      display: flex;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: rgba($black, .8);
+      justify-content: flex-end;
+      width: 100%;
+      img{
+        margin-right: 1.5rem;
+      }
+      &:hover{
+        color: rgba($black, .6);
+      }
+    }
+  }
+  .link{
+    color: #f85c50;
+    font-size: 1.8rem;
+    font-family: 'FuturaPT',Arial,sans-serif;
+    line-height: 1.35;
+    font-weight: 700;
+    text-decoration: underline;
+    &:hover{
+      color: #f85c50;
+      text-decoration: none;
+    }
+  }
+}
+.header-fixed{
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  z-index: -10;
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: all ease 300ms;
+  padding: 10px 0;
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  .header-nav {
+    a{
+      font-weight: 700;
+    }
+  }
+  .header-phones {
+    li{
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+    a{
+      font-weight: 700;
+    }
+  }
+  &.header-scroll{
+    top: 0;
+    opacity: 1;
+    z-index: 110;
+    visibility: visible;
+  }
+}
+.header-button{
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  &:before, &:after, span{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    transition: all ease 300ms;
+  }
+  &:before, &:after{
+    content: '';
+  }
+  &:before{
+    top: 0;
+  }
+  &:after{
+    top: calc(100% - 2px);
+  }
+  span{
+    top: 50%;
+    margin-top: -1px;
+  }
+  &.active{
+    span{
+      opacity: 0;
+    }
+    &:before{
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+    &:after{
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
+}
+.header-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: -11;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 250ms;
+  &.active{
+    z-index: 88;
+    visibility: visible;
+    opacity: 1;
+  }
+}
